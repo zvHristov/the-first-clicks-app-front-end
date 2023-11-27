@@ -2,7 +2,7 @@
 
 # dependencies
 /backend-the-first-clicks/node_modules
-/the-first-clicks-app-front-end/TheFirstClicksApp/node_modules
+/TheFirstClicksApp/node_modules
 
 /TheFirstClicksApp/.pnp
 /TheFirstClicksApp/.pnp.js
