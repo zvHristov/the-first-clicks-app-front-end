@@ -1,0 +1,17 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/backend-the-first-clicks/node_modules
+/the-first-clicks-app-front-end/TheFirstClicksApp/node_modules
+
+/TheFirstClicksApp/.pnp
+/TheFirstClicksApp/.pnp.js
+
+# testing front end
+/TheFirstClicksApp/coverage
+
+# production build fron end
+/TheFirstClicksApp/build
+# end
+
+
