@@ -1,0 +1,32 @@
+@import 'theme';
+
+.firstClicksInput {
+position: relative;
+
+  p {
+
+    label {
+      padding-bottom: 8px;
+      color: $TypographyColorTeal-400;
+      font-size: $fontSizeSmall10;
+    }
+    input, textarea {
+      padding: 14px;
+
+      color: $TypographyColorTeal-900;
+      font-size: $medSmallFontSize;
+
+    }
+  
+    textarea {
+      resize: vertical;
+    }
+
+    i {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-self: center;
+    }
+  }
+}

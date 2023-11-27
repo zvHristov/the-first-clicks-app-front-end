@@ -1,0 +1,31 @@
+@import 'theme';
+
+.dailyWrraper {
+    
+    .dailydate, p {
+        font-size: $fontSizeSmall10;
+        font-weight: $TypographyFontWeightTeal-500;
+        color: $TypographyColorTeal-400;
+    }
+    p {
+        i {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+        }
+        .iconFirstClicks {
+            background-color: $TypographyColorTeal-100;
+        }
+        .iconAvgTTFC {
+            background-color:$TypographyColorTeal-rich-orange;
+        }
+        .iconNoClicks {
+            background-color: $TypographyColorTeal-200;
+        }
+        small {
+            font-size: $fontSizeSmall10;
+            font-weight: $TypographyFontWeightTeal-800; 
+            color: $TypographyBlackColor;
+        }
+    }
+}

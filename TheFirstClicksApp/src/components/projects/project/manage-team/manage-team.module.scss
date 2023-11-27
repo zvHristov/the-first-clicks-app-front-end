@@ -1,0 +1,71 @@
+
+@import 'theme';
+.managementTeamWrraper {
+    display: grid;
+    padding-bottom: 62px;
+
+    h2 {
+        display: grid;
+        grid-template-rows: auto;
+        margin-bottom: 22px;
+        margin-top: 15px;
+        font-size: $medSmall3FontSize;
+    }
+  
+
+    .manageTeamInner {
+        display: grid;
+        grid-template-columns: 10% 35% 25% 30%;
+        grid-template-rows: 45px;
+        border-bottom: $borderColorMain;
+        column-gap: 2%;
+      
+        > div, p {
+            display: grid;
+            font-size: $medSmallFontSize;
+          
+        
+        }
+    
+    
+        .manageThumbnail,  .manageStatus, .managePermissions, .manageOptions {
+            place-items: center;
+            grid-template-rows: auto;
+            grid-template-columns: auto;
+            row-gap: 4px;
+    
+            span {
+                display: grid;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+    
+            }
+        }
+        .manageNames {
+    
+           p {
+            &:first-of-type {
+                font-weight: $TypographyFontWeightTeal-800;
+            }
+           }
+        }
+        .managePermissions {
+            select {
+             
+                padding: 0 4px;
+                border-radius: 0;
+                border: none;
+            }
+        }
+       
+    
+    }
+}
+
+@include mediaMinQuery($md) { // > 768
+    .managementTeamWrraper {
+        .manageTeamInner {
+            grid-template-columns: 10% 40% 30% 15%;}
+    }
+}

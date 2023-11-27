@@ -1,0 +1,198 @@
+@import 'theme';
+
+.excludeElementsWrraper {
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: 20px;
+    padding: 0 3vmax;
+    column-gap: 10px;
+
+    .excludeElementsContainer {
+        h1 {
+            margin-bottom: 22px;
+            font-size: $bigFontSize;
+            font-weight: $TypographyFontWeightTeal-800;
+
+        }
+        .excludeElementsForm {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+            padding: 24px;
+            gap: 8px;
+            h2,h3,ul {
+                display: grid;
+                gap: 16px;
+                color: $TypographyColorTeal-600;
+                font-size: $medSmall2FontSize;
+                font-weight: $TypographyFontWeightTeal-500;
+            }
+            ul {
+                margin-left: 20px;
+                gap: 0;
+                li {
+                    color: $TypographyColorTeal-600;
+                    font-size: $medSmall2FontSize;
+                    font-weight: $TypographyFontWeightTeal-500;
+                }
+            }
+
+
+            .formHolder {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                gap: 8px;
+              
+
+                .controlHolder, h5 {
+                    font-size: $fontSizeSmall11;
+                    font-weight: $TypographyFontWeightTeal-400;
+                }
+                .controlHolder {
+                    display: grid;
+                    grid-template-columns: 10% 90%;
+                    grid-template-rows: auto auto;
+                    border: $borderMainCtrls;
+                    border-radius: $borderRadiusSmallAll;
+
+                    span {
+                        
+                        display: grid;
+                        color: $TypographyColorTeal-600;
+                        background-color: $selectOptionBgColor;
+                        font-size: $medSmallFontSize;
+                        place-items: center;
+                    }
+                    > div {
+                        display: grid;
+                        p {
+                            display: grid;
+                            grid-template-columns: auto;
+                            display: grid;
+                            input {
+                                background-color: $BackgroundColorMain;
+                                color: $TypographyColorTeal-300;
+                                border: none;
+                                border-radius: 0;
+                            }
+                        }
+                    }
+
+                    
+                }
+
+                
+            } 
+
+            .btnHolder {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: auto;
+             
+
+                button:last-of-type {
+                   justify-self: flex-end;
+                }
+
+                button {
+                    display: flex;
+                    flex-direction: row;
+                    justify-self: flex-start;
+                    align-self: center;
+                    
+                    i {
+                        display: flex;
+                        flex-direction: column;
+                        justify-self: flex-end;
+                        align-self: center;
+                        padding-left: 10px;
+                    }
+                }
+                
+            }
+
+         
+        }
+
+
+    }
+
+    .navigation {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        gap: 8px;
+        padding: 28px 20px;
+        margin-top: 45px;
+     
+        border-radius: $borderRadiusPrimaryAll;
+        background-color: $TypographyColorTeal-100;
+   
+        > p, h5 {
+            font-size: $medSmall2FontSize;
+            color: $TypographyColorTeal-600;
+        }
+    }
+
+    
+}
+
+
+@include mediaMinQuery($md) { // > 768 
+    .excludeElementsWrraper {
+        grid-template-columns: 50% 40%;
+        margin-top: 0;
+        padding: 0;
+    
+        
+    }
+
+}
+
+
+@include mediaMinQuery($lg) { // > 992 
+    .excludeElementsWrraper {
+       
+        column-gap: 10%;
+        margin-top: 0;
+        padding: 0;
+        .excludeElementsContainer {
+            .excludeElementsForm {
+                .btnHolder {
+                    button {
+                        width: 70%;
+                    }
+                    button:last-of-type {
+                        width: 50%;
+                     }
+                }
+            }
+        }
+
+        .navigation {
+            max-height: 350px;
+        }
+        
+    }
+
+}
+
+
+@include mediaMinQuery($xll) { // > 1440
+    .excludeElementsWrraper {
+        column-gap: 100px;
+        .excludeElementsForm {
+            .btnHolder {
+                button {
+                    width: 40%;
+                }
+                button:last-of-type {
+                    width: 30%;
+                 }
+            }
+        }
+    }
+
+}
+

@@ -1,0 +1,51 @@
+@import 'theme';
+
+.tooltipWrraper {
+    position: relative;
+    width: 250px;
+    
+
+    .tootipInner {
+
+        position: absolute;
+        z-index: 9999;
+        width: 100%;
+        margin: 0 auto;
+        left: -125px;
+        right: 0;
+        top: 0;
+        padding: 25px 20px 28px 20px;
+        border-radius: $borderRadiusPrimaryAll;
+        
+        &::before {
+            position: absolute;
+            top: -5px;   
+            left: 0;
+            right: 0;
+            content: '';
+            width: 0; 
+            height: 0;
+            margin: 0 auto; 
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            
+        
+        }
+        h4 {
+    
+            margin-bottom: 18px;
+            text-align: center;
+            color: $TypographyColorTeal-50;
+            font-size: $medSmall2FontSize;
+            font-weight: $TypographyFontWeightTeal-800;
+        }
+        h5 {
+            text-align: center;
+            color: $TypographyColorTeal-50;
+            font-size: $medSmall2FontSize;
+            font-weight: $TypographyFontWeightTeal-500;
+        }
+     }
+
+ 
+}

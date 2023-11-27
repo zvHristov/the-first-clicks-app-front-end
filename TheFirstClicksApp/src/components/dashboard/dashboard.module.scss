@@ -1,0 +1,22 @@
+
+@import 'theme';
+
+.dashboardWrapper {
+  display: grid;
+  grid-template-rows: 54px auto auto;
+  grid-template-areas:
+          "NavigationStats"
+          "Header"
+          "FiltersSection";
+
+  .filtersSection {
+    grid-area: FiltersSection;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: "StatisticsWrapper";
+
+
+  }
+
+}
+

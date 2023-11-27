@@ -1,0 +1,33 @@
+@import 'theme';
+.navigationStats {
+  display: flex;
+  justify-self: start;
+  padding-left: 3vmax;
+  flex-direction: row;
+  .breadcrumbs {
+    display: flex;
+    padding-top: 20px;
+    align-self: self-start;
+    justify-content: space-evenly;
+    align-items: stretch;
+    li {
+
+      font-size: $fontSizeSmall10;
+      color: $TypographyColorTeal-500;
+      display: inline-grid;
+      position: relative;
+      margin-right: 6px;
+
+    }
+  }
+
+}
+@include mediaMinQuery($xlBreakPoint) { // > 1280
+  .navigationStats {
+    width: 1280px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+}
+

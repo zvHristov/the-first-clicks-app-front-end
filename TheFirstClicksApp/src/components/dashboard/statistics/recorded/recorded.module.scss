@@ -1,0 +1,228 @@
+@import 'theme';
+.recordedWrraper {
+    display: grid;
+    padding: 0 3vmax;
+    font-size: $fontSizeSmall11;
+    margin-top: 24px;
+    
+    .tableRecordeds {
+        display: grid;
+        row-gap: 20px;
+
+        .headerRecorded {
+            display: grid;
+            grid-template-columns: 10% 16% 16% 16% 16% 16% 10%;
+            row-gap: 20px;
+
+            p {
+                display: grid;
+    
+                font-weight: $TypographyFontWeightTeal-500;
+                color: $TypographyColorTeal-500;
+            }
+
+            .filtersRecorded {
+                display: grid;
+                button {
+                    display: flex;
+                    flex-direction: row;
+                    background-color: transparent;
+                    color: $TypographyColorTeal-700;
+                    border:none;
+                    border-radius: 0;
+                    cursor: pointer;
+                    
+                    .switchRec {
+                        display: flex;
+                        position: relative;
+                        width: 28px;
+                        height: 16px;
+                        border-radius: $borderRadiusBigAll;
+                        border: $borderSwitchBtnsCtrls;
+                        background-color: $selectOptionBgColor;
+                        outline: none;
+
+                        &::before {
+                            position: relative;
+                            top: 2px;
+                            left: 2px;
+                            content: '';
+                            border-radius: 50%;
+                            width: 12px;
+                            height: 12px;
+                            background-color: $TypographyColorTeal-700;
+                            
+                        }
+                        &::after {
+                            content: '';
+                            border-radius: none;
+                            background-color: transparent;
+                        }
+                    }
+
+                    .switchRecByGroup {
+                        background-color: $TypographyColorTeal-700;
+                        border: $borderDarckBlackBtnsCtrls;
+
+                        &::before {
+                            content: '';
+                            border-radius: none;
+                            background-color: transparent;
+                        }
+                        &::after {
+                            content: '';
+                            position: relative;
+                            top: 2px;
+                            border-radius: 50%;
+                            width: 12px;
+                            height: 12px;
+                            background-color: $selectOptionBgColor;
+                        }
+                    }
+                }
+               
+            }
+        }
+
+        .headerRecordedByGroup {
+            grid-template-columns: 30% 20% 20% 20% 10%;  /// grid-template-columns: 35% 15% 15% 15% 20%;
+        }
+    
+        .tableRecorded {
+            display: grid;
+            row-gap: 20px;
+
+            .rowRecordeds {
+                display: grid;
+                grid-template-columns: 10% 16% 16% 16% 16% 16% 10%;
+         
+                div {
+                    display: grid;
+                }
+
+                .flogHolder {
+                  
+                    .flogInner {
+                        display: grid;
+                        place-content: center;
+                        place-items: center;
+                        overflow: hidden;
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                        .flogLocation {
+                            display: grid;
+                         text-align: center;
+                            font-size: 20px;
+                    
+                        }
+                    }
+                  
+                }
+
+                .segmentColum {
+                    place-content: start;
+
+                    .segmentType {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        color: $TypographyColorTeal-50;
+                        font-size: $fontSizeSmall11;
+                        font-weight: $TypographyFontWeightTeal-800;
+                       i {
+                           padding-right: 4px;
+                       }
+                        
+                    }
+                    
+                }
+                .tagNameColum {
+                    position: relative;
+                    grid-template-columns: 35px 20px;
+                    i {
+                        color: $TypographyColorTeal-500;
+                        cursor: pointer;
+                    }
+                    .infoRec {
+                        padding: 20px;
+                        background-color: $TypographyWhite;
+                        &::before {
+                            border-bottom: 5px solid $TypographyWhite;
+                        }
+                        .tooltipRecords {
+                            h4 {
+                                margin: 0;
+                                padding: 0;
+                            }
+                            p {
+                                font-size: $medSmallFontSize;
+                                font-weight: $TypographyFontWeightTeal-500;
+                                color: $TypographyColorTeal-300;
+                            }
+                            div {
+                                
+                                color: $TypographyColorTeal-900;
+                                &:first-of-type {
+                                    margin-bottom: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+          
+    
+            }
+          
+       }
+
+       .tableRecordedByGroup {
+            .rowRecordeds {
+                grid-template-columns: 30% 20% 20% 20% 10%; 
+            }
+      
+        }
+       
+    }
+   
+}
+
+@include mediaMinQuery($md) { /// > 768
+    .recordedWrraper {
+        .headerRecorded {
+            grid-template-columns: 20% 12% 12% 12% 12% 12% 20%;
+        }
+
+        .headerRecordedByGroup {
+            grid-template-columns: 35% 15% 15% 15% 20%;
+        }
+
+        .tableRecorded {
+
+
+            .rowRecordeds {
+                grid-template-columns: 20% 12% 12% 12% 12% 12% 20%;
+                .segmentColum {
+                
+                    .segmentType {
+                        width: 35%;
+				    }
+                }
+            }
+        }
+        .tableRecordedByGroup {
+            .rowRecordeds {
+                grid-template-columns: 35% 15% 15% 15% 20%;
+            }
+        }
+    }
+}
+
+@include mediaMinQuery($xlBreakPoint) { /// > 1280
+    .recordedWrraper {
+        width: 1280px;
+        margin: 24px auto 0 auto;
+        padding: 0;
+    }
+
+}

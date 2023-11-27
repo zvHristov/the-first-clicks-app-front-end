@@ -1,0 +1,96 @@
+@import "theme";
+
+.billingWrraper {
+    display: grid;
+    margin-top: 20px;
+    padding: 0 3vmax;
+    
+    h1 {
+        margin-bottom: 22px;
+
+    }
+    .billingInner {
+        display: grid;
+        grid-template-columns:  auto;
+        grid-template-rows: auto;
+
+        .billingFormHolder {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto auto auto;
+            column-gap: 24px;
+            padding: 40px;
+
+            > div {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                margin-bottom: 20px;
+
+                p {
+                    gap: 4px;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    
+                    label {
+                        display: grid;
+                        color:$TypographyColorTeal-900;
+                    }
+                }
+            }
+            .country {
+                display: block;
+                small {
+                    display: flex;
+                    padding-bottom: 12px;
+                    color: $TypographyColorTeal-900;
+                    font-size: $fontSizeSmall10;
+                }
+                select {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                }
+            }
+  
+            .btnHolder {
+                display: grid; 
+                
+                button {
+                    
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    width: 30%;
+                    
+                }
+            }
+        }
+
+    }
+}
+
+@include mediaMinQuery($md) { /// > 768
+    .billingWrraper {
+        margin-top: 0;
+        padding: 0;
+        .billingInner {
+            width: 80%;
+    
+            .billingFormHolder {
+                grid-template-columns: 1fr 1fr;
+            }
+            .btnHolder {
+                grid-row-start: start;
+            }
+        }
+    }
+}
+
+@include mediaMinQuery($xl) { /// > 1224
+    .billingWrraper {
+
+        .billingInner {
+            width: 50%;
+        }
+    }
+}

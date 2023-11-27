@@ -1,0 +1,258 @@
+@import 'theme';
+@import 'grid';
+
+
+/*#region RESET/NORMALIZE */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html, body {
+    height: 100%;
+
+    background-color: $BackgroundColorMain;
+    font-size: 1rem;
+  }
+
+  * {
+
+      font-family: $fontFamifyInter;
+    margin: 0;
+    padding: 0;
+
+    h1, h2, h3, h4, h5, h6, p, button {
+        font-family: $fontFamifyInter;
+        color: $TypographyColorTeal-900;
+    }
+    a {
+     text-decoration: none;
+      font-weight: $TypographyFontWeightTeal-500;
+    }
+
+
+  }
+
+  //
+  //ERRORS
+
+.error {
+  font-size: $medSmallFontSize;
+  color: $TypographyColorTeal-error-red;
+}
+
+.validate-error {
+  width: 256px;
+  padding: 11px;
+  top: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+  font-weight: $TypographyFontWeightTeal-500;
+  color: $TypographyColorTeal-100;
+  font-size: $medSmallFontSize;
+  background-color: $TypographyColorTeal-error-red;
+  border-radius: $borderRadiusMainAll;
+
+  &::before {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    border-bottom: solid 5px $TypographyColorTeal-error-red;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+}
+
+
+textarea {
+  padding: 12px 10px;
+  outline: none;
+}
+textarea.withAllBoards {
+  font-size: $medSmallFontSize;
+  color: $TypographyColorTeal-500;
+  border-radius: $borderRadiusSmallAll;
+  border: $borderMainCtrls;
+  background-color: $TypographyColorTeal-50;
+}
+textarea.whiteBoards {
+  font-size: $medSmallFontSize;
+  color: $TypographyBlackColor;
+  border-radius: $borderRadiusSmallAll;
+  border: $borderMainCtrls;
+  background-color: $TypographyWhite;
+}
+
+
+input {
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+.primaryInputHolder {
+  input {
+    background-color: $TypographyColorTeal-100;
+    border-radius: $borderRadiusSmallAll;
+    border: $borderColorMain;
+  }
+
+}
+
+.calendar {
+  input {
+    background-color: $TypographyWhite;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+
+  }
+
+ }
+.grayInputHolder {
+  input {
+    background-color: $TypographyColorTeal-50;
+    border-radius: $borderRadiusSmallAll;
+    border: $borderColorMain;
+  }
+}
+.checkboxTFC {
+  font-size: $fontSizeSmall11;
+}
+.checkboxInputTFC {
+  border-radius: $borderRadiusSmallAll;
+  border: $borderMainCtrls;
+  background-color: $TypographyColorTeal-50;
+}
+select {
+  position: relative;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  //background-image: url("/assets/icons/select_arrow.png");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  option {
+    padding: 4px;
+    background-color: $TypographyWhite;
+    cursor: pointer;
+    &:hover {
+      background-color: $selectOptionBgColor;
+    }
+
+  }
+}
+.formTFCborder {
+  border: $borderMainCtrls;
+  border-radius: $borderRadiusPrimaryAll;
+  background-color: $TypographyWhite;
+}
+.filters {
+        display: flex;
+      justify-content: center;
+      flex-direction: row;
+      justify-self: end;
+      padding: 8px 20px 8px 14px;
+      color: $TypographyColorTeal-900;
+      font-size: $medSmallFontSize;
+
+      border-radius: $borderRadiusSmallAll;
+      border: $borderMainCtrls;
+}
+.filters.medium {
+  padding: 14px 14px 14px;
+}
+
+.buttonsTFC {
+  padding: 8px 10px;
+  font-size: $medSmallFontSize;
+  font-weight: $TypographyFontWeightTeal-500;
+  border-radius: $borderRadiusMainAll;
+  cursor: pointer;
+  border: none;
+}
+.buttonsTFC.true-valid-error-class {
+  cursor: pointer;
+
+}
+.buttonsTFC.false-valid-error-class {
+  cursor: none;
+  background-color: $TypographyColorTeal-200;
+  color: $TypographyWhite;
+}
+.primaryBtn {
+  background-color: $TypographyColorTeal-red-light;
+  color: $TypographyColorTeal-100;
+  &:focus, &:hover {
+    background-color: $TypographyColorTeal-800;
+    color: $TypographyColorTeal-50;
+  }
+}
+.mainBtn {
+  background-color: $TypographyColorTeal-900;
+  color: $TypographyColorTeal-100;
+  &:focus, &:hover {
+    background-color: $TypographyColorTeal-800;
+    color: $TypographyColorTeal-50;
+  }
+}
+
+.secoundaryWhiteBtn {
+  background-color: $TypographyWhite;
+  color: $TypographyColorTeal-400;
+}
+.secoundaryGrayBtn {
+  background-color: $TypographyColorTeal-100;
+  color: $TypographyColorTeal-700;
+  &:focus, &:hover {
+    background-color: $TypographyColorTeal-800;
+    color: $TypographyColorTeal-50;
+  }
+}
+
+.borderBtn {
+ border:$borderMainCtrls;
+ border-radius: borderRadiusPrimaryAll;
+}
+
+.cancelBtn {
+  background-color: $TypographyColorTeal-200;
+  color: $TypographyWhite;
+}
+
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  align-items: center;
+}
+
+
+.lineTFC {
+  border-bottom: $borderMainCtrls;
+}

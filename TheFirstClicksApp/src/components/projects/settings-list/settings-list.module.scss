@@ -1,0 +1,49 @@
+@import 'theme';
+.settingsPage {
+  display: grid;
+  top: 38px;
+  right: 8px;
+  z-index: 2;
+  width: 178px;
+  position: absolute;
+  background-color: $TypographyWhite;
+  border-radius: $borderRadiusMainAll;
+  box-shadow: $boxShadowPrimary;
+  border: $borderMainBtnsCtrls;
+  list-style: none;
+
+  li {
+   
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+    padding: 8px;
+    font-size: $medSmallFontSize;
+    color: $TypographyColorTeal-700;
+    cursor: pointer;
+    &:hover {
+      background-color: $selectOptionBgColor;
+      i {
+        background-color: $selectOptionBgColor;
+      }
+    }
+    &:last-child {
+      span {
+        color: $TypographyColorTeal-red-light;
+      }
+
+    }
+
+    i, span {
+      display: grid;
+      place-content: start;
+      color: $TypographyColorTeal-700;
+   
+    }
+    i {
+      place-content: end;
+    }
+  }
+
+}

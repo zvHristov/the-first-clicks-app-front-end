@@ -1,0 +1,79 @@
+
+@import 'theme';
+
+.modalTFC {
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden; 
+    background-color: rgba(32, 45, 45, 0.4);
+    &:target {
+        &::before {
+            display: block;
+            
+        }
+
+        .modalInner {
+            transform: translate(0, 0);
+        }
+    }
+
+    .modalInner {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2em;
+        background: white;
+        opacity: 1;
+        border-radius: $borderRadiusPrimaryAll;
+
+        .modalHeader {
+            display: grid;
+            grid-template-columns: auto 10%;
+            grid-template-rows: auto auto;
+            column-gap: 3px;
+            margin-bottom: 32px;
+
+            h2 {
+                display: grid;
+                font-weight: $TypographyFontWeightTeal-800;
+                font-size: $bigMedFontSize;
+
+            }
+            p {
+                display: grid;
+                font-weight: $TypographyFontWeightTeal-400;
+                font-size: $medSmall3FontSize;
+            }
+            .closeBtn {
+                display: grid;
+                grid-template-columns: auto auto;
+                font-size: $medSmallFontSize;
+                color: $TypographyColorTeal-600;
+                cursor: pointer;
+                i {
+                    padding-right: 4px;
+                }
+            }
+        }
+
+        .modalContent {
+            display: grid;
+            
+        }
+    }
+}
+
+@include mediaMinQuery($md) { /// > 768
+    .modalTFC {
+    
+        .modalInner {
+            width: 40%;
+        }
+    }
+}

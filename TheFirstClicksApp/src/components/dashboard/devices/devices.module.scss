@@ -1,0 +1,78 @@
+@import 'theme';
+
+.devicesContrWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+
+  .devicesContrTitle {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    font-size: $fontSizeSmall10;
+    color: $TypographyColorTeal-300;
+    font-weight: $TypographyColorTeal-500;
+    cursor: pointer;
+
+  }
+  .devicesControllesHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    font-size: $fontSizeSmall11;
+    border: $borderMainCtrls;
+    border-radius: $borderRadiusMainAll;
+
+    .deviceCtrlHolder:nth-child(1) ,
+    .deviceCtrlHolder:nth-child(2) {
+      border-right: $borderMainCtrls;
+    }
+    .deviceCtrlHolder {
+      height: 30px;
+
+      flex-wrap: wrap;
+      display: flex;
+      text-align: center;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      align-self: center;
+      border-radius: 0;
+      cursor: pointer;
+      border: none;
+
+      box-sizing: border-box;
+      color: $TypographyColorTeal-400;
+      font-weight: $TypographyFontWeightTeal-500;
+      background-color: $BgColorMainCtrls;
+      span ,i {
+        flex-direction: column;
+        align-self: center;
+
+      }
+      i {
+        margin: 8px;
+      }
+      span {
+        margin-right: 4px;
+      }
+
+    }
+    .active {
+      color: $TypographyColorTeal-700;
+      font-weight: $TypographyFontWeightTeal-700;
+    }
+  }
+
+
+}
+
+@include mediaMinQuery($smx) { // > 440
+  .devicesContrWrapper {
+    .devicesControllesHolder {
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import 'theme';
+.headerWrapper {
+  display: grid;
+  grid-area: Header;
+  padding: 0 3vmax;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "Info" "SideEvent" "FiltersDevices";
+
+
+  .infoWrapper {
+    grid-area: Info;
+    h1 {
+      font-size: $bigFontSize;
+      font-weight: $TypographyFontWeightTeal-800;
+      color: $TypographyBlackColor;
+    }
+    h2 {
+
+      font-size: $fontSizeSmall11;
+      font-weight: $TypographyFontWeightTeal-500;
+      color: $TypographyColorTeal-700;
+   
+        p {
+          display: grid;
+          grid-template-columns: 90% 10%;
+          margin-top: 4px;
+
+          input {
+            width: 100%;
+            padding: 0;
+            font-size: $fontSizeSmall11;
+            font-weight: $TypographyFontWeightTeal-500;
+            color: $TypographyColorTeal-700;
+            background-color: transparent;
+            border-radius: 0;
+            border: none;
+          }
+          i {
+            display: flex;
+            flex-direction: row;
+            justify-content: first baseline;
+       
+            color: #5D8080;
+            font-size: 12px;
+            cursor: pointer;
+            }
+        }
+
+    }
+  }
+
+
+}
+
+@include mediaMinQuery($xlBreakPoint) { // > 768
+  .headerWrapper {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}

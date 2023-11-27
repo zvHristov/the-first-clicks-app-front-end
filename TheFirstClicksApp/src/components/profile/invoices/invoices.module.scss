@@ -1,0 +1,22 @@
+@import 'theme';
+
+.invoicesWrrapper {
+    display: grid;
+    margin-top: 20px;
+    padding: 0 3vmax;
+
+    h1 {
+        margin-bottom: 22px;
+      
+    }
+    .invoicesInner {
+        display: grid;
+    }
+}
+
+@include mediaMinQuery($md) { // > 768
+    .invoicesWrrapper {
+        margin-top: 0;
+        padding: 0;
+    }
+}

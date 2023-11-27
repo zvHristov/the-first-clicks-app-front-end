@@ -1,0 +1,73 @@
+@import 'theme';
+
+.snippetAreaClassStyle {
+    display: grid;
+    grid-template-columns: 1fr;
+  
+    grid-gap: 0 0;
+    margin-top: 22px;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    
+    background-color: $TypographyColorTeal-50;
+    border-radius: $borderRadiusPrimaryAll;
+    border: $borderMainCtrls;
+
+
+   
+    p {
+      display: grid;
+      padding-left: 20px;
+      line-height: 1.4;
+      
+      &:nth-child(3) {
+        color: $TypographyColorTeal-300;
+      }
+
+      &:nth-child(5),
+      &:nth-child(12) {
+        padding-left: 30px;
+      }
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9),
+      &:nth-child(10),
+      &:nth-child(11) {
+        padding-left: 50px;
+      }
+
+      &:first-of-type {
+        margin-top: 20px;
+        padding-bottom: 30px;
+      }
+      &:last-of-type {
+        margin-bottom: 20px;
+        padding-top: 30px;
+      }
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      justify-content: center;
+      flex-direction: row;
+      position: absolute;
+      right: 12px;
+      top: 12px;
+
+    }
+}
+
+
+
+@include mediaMinQuery($xl) { /// > 1224
+  .snippetAreaClassStyle {
+  
+    button {
+      width: 35%;
+    }
+  }
+}

@@ -1,0 +1,164 @@
+@import 'theme';
+.mainHeader {
+  ///height: $heightHeader;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: $heightHeader;
+  grid-template-areas:
+  "Logo"
+  "TopNavigation";
+
+  border-bottom: 1px solid $borderColorPrimery;
+  background-color: $TypographyWhite;
+
+  .logoHolder {
+    display: grid;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-area: Logo;
+    align-self: center;
+    padding-left: 2vmax;
+
+    .logo {
+      width: 100%;
+      align-self: center;
+    }
+  }
+
+  .navigationHeader {
+    grid-area: TopNavigation;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    padding-right: 2vmax;
+
+    .btnGoToPtoject {
+      display: flex;
+      i {
+        padding-left: 4px;
+      }
+    
+     }  
+
+     nav {
+       display: flex;
+
+      .navigationBar {
+        display: flex;
+        position: relative;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        color: $TypographyWhite;
+        margin-left: 8px;
+        padding-left: 9px;
+        align-self: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+      
+      
+        background-color: $TypographyColorTeal-900;
+        cursor: pointer;
+ 
+      }
+    
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 24px 20px;
+        flex-direction: column;
+        position: absolute;
+        z-index: 999999;
+        list-style: none;
+        top: 53px;
+        right: 0;
+        width: 218px;
+        height: calc(100% - 53px);
+        padding-right: 20px;
+        background-color: $TypographyWhite;
+
+        button {
+          display: flex;
+          flex-direction: row;
+          
+          align-self: center;
+        }
+
+
+        li {
+          display: flex;
+          position: relative;
+          flex-direction: column;
+          align-items: flex-start;
+          margin: 10px 0;
+       
+          small {
+            cursor: pointer;
+          }
+          a, small {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            color: $TypographyColorTeal-900;
+            font-size: $fontSizeSmall11;
+            font-weight: $TypographyFontWeightTeal-500;
+
+            i {
+              display: flex;
+              align-items: center;
+              align-self: end;
+              position: absolute;
+              right: 0;
+              
+            }
+          }
+       
+      
+          
+        }
+       }
+     }
+  }
+
+}
+
+
+@include mediaMinQuery($sxm) { // > 340
+
+  .mainHeader {
+    .logoHolder {
+   
+      .logo {
+        width: 157px;
+      }
+    }
+
+  }
+}
+
+@include mediaMinQuery($md) { // > 768
+
+  .mainHeader {
+    
+    .logoHolder {
+      padding-left: 46px;
+     
+    }
+    .navigationHeader {
+      padding-right: 44px;
+      
+      nav {
+        display: flex;
+ 
+       .navigationBar {
+        margin-left: 25px;
+       }
+      }
+    }
+
+  }
+}

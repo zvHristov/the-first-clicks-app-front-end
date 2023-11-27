@@ -1,0 +1,14 @@
+@import 'theme';
+.settingsPage {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: row;
+  align-self: center;
+  
+  span {
+    font-size: $medSmallFontSize;
+    color: $TypographyColorTeal-700;
+  }
+
+}

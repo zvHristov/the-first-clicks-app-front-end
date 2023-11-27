@@ -1,0 +1,105 @@
+@import 'theme';
+
+.profileWrapper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    margin-top: 60px;
+
+    grid-template-areas:
+          "NavigationSetting"
+          "MainProfile";
+ 
+
+    .profileSetting {
+        display: grid;
+        grid-area: NavigationSetting;
+        grid-column-start: 1;
+        grid-row-start: 1;
+        padding-left: 44px;
+        
+
+        .profileSettingSection {
+          
+            
+            .setingHeading {
+                display: grid;
+                margin-bottom: 32px;
+                font-size: $bigFontSize;
+                font-weight: $TypographyFontWeightTeal-400;
+            }
+    
+            .listItemPage {
+                display: grid;
+                grid-template-columns: 60%;
+                grid-template-rows: auto auto auto auto auto;
+                row-gap: 20px;
+                list-style: none;
+
+                 .listSetting {
+                display: grid;
+                grid-template-columns: auto 5%;
+
+             
+                    color: $TypographyColorTeal-400;
+                    font-size: $medSmallFontSize;
+                    cursor: pointer;
+                    
+                    i {
+                        
+                        
+                        color: $TypographyColorTeal-400;
+                    }
+                   
+                }
+                .activePage {
+                    font-weight: $TypographyFontWeightTeal-900;
+                
+                    i {
+            
+                       ::before{
+                        color: $TypographyColorTeal-900;
+                       }
+                    }
+                   
+                }
+            }
+        }
+   
+    }
+    .experimentMain {
+        grid-area: MainProfile;
+        grid-column-start: 2;
+        grid-row-start: 1;
+    > div {
+        > h1 {
+           
+            font-style: $bigFontSize;
+            font-weight: $TypographyFontWeightTeal-800;
+        }
+    
+    }
+
+    }
+}
+
+@include mediaMinQuery($md) { /// > 768
+    .profileWrapper {
+        grid-template-columns: 25% auto;
+        
+       
+    }
+}
+
+
+@include mediaMinQuery($xlBreakPoint) { /// > 1280
+    .profileWrapper {
+          width: 1280px;
+          margin: 30px auto 0 auto;
+        
+        .profileSetting {
+            padding-left: 0;
+        }
+    }
+}
+

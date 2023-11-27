@@ -1,0 +1,78 @@
+@import 'theme';
+.filterWrapper{
+  grid-area: FiltersDevices;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  border-top:$borderColorMain;
+  row-gap: 8px;
+  padding-top: 8px;
+  margin-bottom: 32px;
+  
+
+  .filtersTitle {
+    display: grid;
+    font-size: $fontSizeSmall10;
+    color: $TypographyColorTeal-300;
+    font-weight: $TypographyFontWeightTeal-500;
+    small {
+      display: grid;
+      padding-top: 11px;
+     
+    }
+
+  }
+
+  .filtersDeviceContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 8px;
+  
+    
+    .filtersDeviceHolder,
+    > div {
+      display: grid;
+      place-content: center;
+      background-color: $TypographyWhite;
+      border: $borderMainCtrls;
+      box-sizing: border-box;
+      border-radius: 4px;
+      select {
+        display: grid;
+        font-size: $medSmallFontSize;
+        font-weight: $TypographyFontWeightTeal-500;
+      }
+      input {
+        padding: 0;
+      }
+    }
+  }
+
+}
+.filtersDeviceContainerBarChars {
+  grid-template-columns: auto;
+  .filtersDeviceContainer { 
+    grid-template-columns: auto auto;
+    row-gap: 10px;
+  }
+}
+
+
+@include mediaMinQuery($md) { // > 768
+  .filterWrapper{
+    grid-template-columns: 3% 39% 40% 18%;
+    .filtersDeviceContainer {
+      margin-right: 30px;
+      
+    }
+  }
+}
+@include mediaMinQuery($md) { // > 768
+  .filtersDeviceContainerBarChars{
+    grid-template-columns: 3% 44% 35% 18%;
+    .filtersDeviceContainer { 
+      grid-template-columns: auto auto auto auto;
+      row-gap: 0;
+    }
+  }
+}

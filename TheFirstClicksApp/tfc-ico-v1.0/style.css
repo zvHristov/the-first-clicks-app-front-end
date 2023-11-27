@@ -1,0 +1,186 @@
+@font-face {
+  font-family: 'tfc-ico';
+  src:  url('fonts/tfc-ico.eot?pr2k9b');
+  src:  url('fonts/tfc-ico.eot?pr2k9b#iefix') format('embedded-opentype'),
+    url('fonts/tfc-ico.ttf?pr2k9b') format('truetype'),
+    url('fonts/tfc-ico.woff?pr2k9b') format('woff'),
+    url('fonts/tfc-ico.svg?pr2k9b#tfc-ico') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ico-"], [class*=" ico-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'tfc-ico' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-account-ico:before {
+  content: "\e900";
+}
+.ico-arrow-DOWN-ico:before {
+  content: "\e901";
+}
+.ico-arrow-LEFT-ico:before {
+  content: "\e902";
+}
+.ico-arrow-RIGHT-ico:before {
+  content: "\e903";
+}
+.ico-arrow-UP-ico:before {
+  content: "\e904";
+}
+.ico-arrowhead-down-ico:before {
+  content: "\e905";
+}
+.ico-arrowhead-up-ico:before {
+  content: "\e906";
+}
+.ico-checkmark-circle-ico:before {
+  content: "\e907";
+}
+.ico-checkmark-icon:before {
+  content: "\e908";
+}
+.ico-copy-ico:before {
+  content: "\e909";
+}
+.ico-desktop-ico:before {
+  content: "\e90a";
+}
+.ico-doc-ico:before {
+  content: "\e90b";
+}
+.ico-download-ico:before {
+  content: "\e90c";
+}
+.ico-edit-ico:before {
+  content: "\e90d";
+}
+.ico-expand-ico:before {
+  content: "\e90e";
+}
+.ico-filters-ico:before {
+  content: "\e90f";
+}
+.ico-fire-icon:before {
+  content: "\e910";
+}
+.ico-from-to-ico:before {
+  content: "\e911";
+}
+.ico-full-screen-ico:before {
+  content: "\e912";
+}
+.ico-grid-empty-ico:before {
+  content: "\e913";
+}
+.ico-grid-ico:before {
+  content: "\e914";
+}
+.ico-heat-map-ico:before {
+  content: "\e915";
+}
+.ico-img-ico:before {
+  content: "\e916";
+}
+.ico-info-ico:before {
+  content: "\e917";
+}
+.ico-invoice-ico:before {
+  content: "\e918";
+}
+.ico-jobs-ico:before {
+  content: "\e919";
+}
+.ico-lightning-icon:before {
+  content: "\e91a";
+}
+.ico-link-ico:before {
+  content: "\e91b";
+}
+.ico-link-redirect-ico:before {
+  content: "\e91c";
+}
+.ico-list-ico-1:before {
+  content: "\e91d";
+}
+.ico-list-ico:before {
+  content: "\e91e";
+}
+.ico-minus-ico:before {
+  content: "\e91f";
+}
+.ico-mobile-ico:before {
+  content: "\e920";
+}
+.ico-move-ico:before {
+  content: "\e921";
+}
+.ico-options-ico:before {
+  content: "\e922";
+}
+.ico-pause-ico:before {
+  content: "\e923";
+}
+.ico-pause-page-click:before {
+  content: "\e924";
+}
+.ico-payment-ico:before {
+  content: "\e925";
+}
+.ico-plus-ico:before {
+  content: "\e926";
+}
+.ico-question-mark-ico:before {
+  content: "\e927";
+}
+.ico-search-ico:before {
+  content: "\e928";
+}
+.ico-settings-full-ico:before {
+  content: "\e929";
+}
+.ico-settings-outline-ico:before {
+  content: "\e92a";
+}
+.ico-shrink-ico:before {
+  content: "\e92b";
+}
+.ico-snippet-ico:before {
+  content: "\e92c";
+}
+.ico-stats-ico:before {
+  content: "\e92d";
+}
+.ico-tablet-ico:before {
+  content: "\e92e";
+}
+.ico-target-click-ico:before {
+  content: "\e92f";
+}
+.ico-teams-ico:before {
+  content: "\e930";
+}
+.ico-upload-ico-1:before {
+  content: "\e931";
+}
+.ico-upload-ico:before {
+  content: "\e932";
+}
+.ico-webpage-ico:before {
+  content: "\e933";
+}
+.ico-x-ico:before {
+  content: "\e934";
+}

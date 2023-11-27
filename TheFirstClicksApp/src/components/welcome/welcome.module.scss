@@ -1,0 +1,150 @@
+@import "theme";
+
+.welcomeWrpGridRows{
+  grid-template-rows: auto auto;
+  grid-template-areas:
+        "WelcomeTitle"
+        "WelcomeRow"
+        "WelcomeSectionsGrid";
+  padding: 0 3vmax;
+
+  .welcomeTitle{
+    padding: 48px 0 20px;
+    grid-area: WelcomeTitle;
+    font-size: $bigFontSize;
+  }
+
+  .welcomeMainGridRowArea{
+    grid-area: WelcomeRow;
+
+    p {
+      font-size: $medSmall3FontSize;
+      .welcomeUpdateButton {
+        color: $TypographyColorTeal-900;
+        font-size: $medSmall3FontSize;
+        text-decoration: underline;
+      }
+    }
+    p:last-child {
+      margin-top: 40px;
+    }
+  }
+
+  .welcomeSectionsGridRowArea{
+    grid-area: WelcomeSectionsGrid;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    margin-top: 40px;
+    column-count: 1;
+    column-gap: 24px;
+
+    .welcomeSectionColumns{
+      display: grid;
+      background-color: $TypographyWhite;
+      border: $borderMainCtrls;
+      border-radius: $borderRadiusMainAll;
+
+      h4 {
+        margin-top: 40px;
+      }
+        h2,h3, h4 {
+          font-size: $regularFontSize;
+          line-height: $LineHeightMain;
+        }
+        .welcomeBtn, .buttonInvite {
+
+          margin: 20px 0;
+
+          i {
+            padding-left: 4px;
+            display: inline-flex;
+            align-self: center;
+          }
+        }
+
+     
+  
+
+      }
+
+    }
+
+    .welcomeSectionColumns1 {
+      padding: 0 40px;
+
+      p {
+        padding: 10px 0;
+        font-size: $medSmallFontSize;
+        font-weight: $TypographyFontWeightTeal-400;
+        color: $TypographyColorTeal-600;
+      }
+
+
+
+    }
+
+    .welcomeSectionColumns2 {
+     
+      padding-left: 28px;
+
+        .welcomeForm {
+
+            padding-top: 20px;
+           
+          textarea {
+            min-height: 42px;
+          }
+
+            p {
+              display: flex;
+              justify-content: flex-start;
+              flex-direction: column;
+              margin-right: 40px;
+              label {
+                font-size: $medSmallFontSize;
+                color: $TypographyColorTeal-500;
+              }
+            }
+
+        }
+
+
+  }
+
+
+}
+
+ @include mediaMinQuery($md) { /// > 768
+  
+   .welcomeWrpGridRows{
+      margin-bottom: 0;
+      gap: 0;
+
+     .welcomeSectionsGridRowArea {
+       column-count: 2;
+       flex-direction: row;
+       flex-flow: row;
+       grid-template-columns: 50% 50%;
+
+       .welcomeSectionColumns {
+         .welcomeBtn {
+           width: 40%;
+         }
+         
+       }
+     }
+
+   }
+ }
+
+
+@include mediaMinQuery($xlBreakPoint) { // > 1280
+  .welcomeWrpGridRows{ 
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+}
+

@@ -1,0 +1,25 @@
+@import 'theme';
+
+.sendSideEventWrapper {
+  grid-area: SideEvent;
+  display: flex;
+  margin-top: 24px;
+  margin-bottom: 19px;
+  flex-direction: row;
+  justify-content: stretch;
+  .brandingIcon {
+    display: flex;
+    margin-right: 9px;
+    width: 16px;
+    height: 16px;
+    background-color: $TypographyColorTeal-900;
+  }
+  .branding {
+    display: flex;
+    align-self: center;
+    font-size: $medSmallFontSize;
+    color: $TypographyColorTeal-700;
+    font-weight: $TypographyFontWeightTeal-500;
+
+  }
+}

@@ -1,0 +1,57 @@
+@import 'variables';
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+  
+// anim properties and default val
+// use example--->   @include animate(2s, linear, 0s, 1, normal, forwards, running, slideoutNav)
+// duration (0s) | timing-function (ease) | delay (0s) | iteration-count (1) |
+// direction (normal) | fill-mode (none) | play-state (running) | name
+@mixin animate($duration, $timingFunc, $delay, $iteration, $direction, $fillMode, $playState, $name) {
+    animation-duration: $duration;
+    animation-timing-function: $timingFunc;
+    animation-delay: $delay;
+    animation-iteration-count: $iteration;
+    animation-direction: $direction;
+    animation-fill-mode: $fillMode;
+    animation-play-state: $playState;
+    animation-name: $name;
+}
+
+
+
+@mixin mediaMinQuery($query) {
+    @media only screen and (min-width: $query) {
+        @content;
+    }
+}
+
+@mixin mediaMaxQuery($query) {
+    @media only screen and (max-width: $query) {
+        @content;
+    }
+}
+
+
+// example
+
+// @include mediaMaxQuery($var) { // < 786
+
+// }
+
+
+// @include mediaMinQuery($var) { // > 1024
+
+// }

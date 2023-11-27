@@ -1,0 +1,161 @@
+@import 'theme';
+
+.textareaTagsWrraper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+
+        .textareaStyle {
+            padding: 18px 14px;
+            background-color: $TypographyColorTeal-100;
+            border-radius: $borderRadiusSmallAll;
+            font-size: $medSmallFontSize;
+            border: none;
+            
+            tag {
+              
+                font-size: $medSmallFontSize;
+                border-radius: $borderRadiusSmallAll;
+              
+
+                background-color:  $TypographyWhite;
+                --tag-bg                   : $TypographyWhite;
+                --tag-hover                : $TypographyWhite;
+                --tags-border-color        : $borderColor;
+                --tags-hover-border-color  : $borderColor;
+                --tags-focus-border-color  : $borderColor;
+                --tag-text-color           : $TypographyColorTeal-900;
+                --tag-text-color--edit     : $TypographyColorTeal-900;
+                --tag-pad                  : .3em .5em;
+                --tag-inset-shadow-size    : none;
+                --tag-invalid-color        : $TypographyColorTeal-error-red;
+                --tag-invalid-bg           : $TypographyWhite;
+                --tag-remove-bg            : $TypographyWhite;
+                --tag-remove-btn-color     : $TypographyWhite;
+                --tag-remove-btn-bg        : $TypographyWhite;
+                --tag-remove-btn-bg--hover : $TypographyWhite;
+                --input-color              : $TypographyColorTeal-900;
+                --tag--min-width           : 1ch;
+                --tag--max-width           : auto;
+                --tag-hide-transition      : .0s;
+                --placeholder-color        : $TypographyColorTeal-300;
+                --placeholder-color-focus  : $TypographyColorTeal-400;
+                --loader-size              : .8em;
+       
+                > .tagify__tag__removeBtn {
+                    &::after {
+                        content: " ";
+                    }
+                }
+            }
+         
+          
+        
+        }
+
+    .innerUser {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+
+        h2 {
+            display: grid;
+            margin-top: 28px;
+            margin-bottom: 21px;
+            font-size: $medSmall2FontSize;
+   
+        }
+        .userContainer {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+          
+            .userRow {
+                display: grid;
+                grid-template-columns: 10% 55% 25% 10%;
+                grid-template-rows: 40px;
+                border-bottom: $borderMainBtnsCtrls;
+                
+            
+                > p {
+                    display: grid;
+                    grid-template-columns: 100%;
+                    place-items: center;
+                    font-size: $medSmallFontSize;
+                   
+
+                    &:first-of-type {
+                       
+                        span {
+                            display: grid;
+                            grid-template-columns: auto;
+                            place-items: center;
+                            place-content: center;
+                            width: 18px;
+                            height: 18px;
+                            border-radius: 50%;
+                            font-size: x-small;
+                            color: $TypographyWhite;
+                            background-color: $TypographyColorTeal-800;
+                        }
+                    }
+                    select{
+                        display: grid;
+                        place-items: center;
+                        border: none;
+                        border-radius: 0;
+                        cursor: pointer;
+                    }
+    
+                
+                }
+
+                .emailUser {
+                    place-items: start;
+                    place-content: center;
+                }
+
+                > div {
+                    display: grid;
+                    grid-template-columns: auto 30%;
+                    grid-template-rows: auto;
+                }
+                i , select{
+                    display: grid;
+                    place-items: center;
+
+                    cursor: pointer;
+                }
+
+                select {
+                    border: none;
+                    border-radius: 0;
+                }
+            }
+
+            .userFooter {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                grid-template-rows: auto;
+                margin-top: 24px;
+                place-items: end;
+                place-content: center;
+                
+                p {
+                    display: grid;
+                    place-self: center;
+                    text-align: right;
+                    align-content: center;
+                    font-size: $medSmallFontSize;
+                }
+
+                button {
+                    display: flex;
+                
+                }
+            }
+        }
+    }
+   
+}

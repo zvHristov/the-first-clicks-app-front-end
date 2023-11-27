@@ -1,0 +1,302 @@
+@import 'theme';
+
+.statisticsWrapper {
+  grid-area: StatisticsWrapper;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+          "StatisticsSectionsInfo"
+          "StatisticsInner";
+  background-color: $BackgroundColorMain;
+
+  .statisticsSectionsInfo {
+    display: grid;
+    grid-area: StatisticsSectionsInfo;
+    position: relative;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    padding: 0 0 0 3vmax;
+    margin-bottom: 29px;
+   
+
+    .tooltipContent {
+      background-color: $TypographyColorTeal-800;
+      &::before {
+        border-bottom: 5px solid $TypographyColorTeal-800;
+      }
+    }
+
+    .firstClickSection ,
+    .noClicksSection ,
+    .hotspotsSection,
+    .avgTTFCSection ,
+    .excludedSection {
+      display: flex;
+      flex-direction: column;
+      align-items: first baseline;
+      justify-content: center;
+      align-content: center;
+
+      .statisticsText {
+        font-size: $regularFontSize;
+        color: $TypographyBlackColor;
+        font-weight: $TypographyFontWeightTeal-800;
+        margin-bottom: 4px;
+      }
+      .statisticsInfoText {
+        display: flex;
+        justify-content: flex-start;
+        align-items: first baseline;
+        align-content: center;
+        font-size: $fontSizeSmall11;
+        color: $TypographyColorTeal-500;
+        font-weight: $TypographyFontWeightTeal-500;
+        cursor: pointer;
+
+        .statisticsInfoIcon {
+          display: flex;
+          padding-left: 8px;
+          justify-content: flex-end;
+          color: $TypographyColorTeal-500;
+
+        }
+
+      
+      }
+    }
+  }
+
+
+
+  .statisticsInner {
+    display: grid;
+    grid-area: StatisticsInner;
+    grid-template-columns: auto;
+    position: relative;
+
+
+    .frameHolder {
+      display: grid;
+      z-index: 4;
+      grid-template-rows: auto auto;
+      grid-template-areas:  "Controller" "Frame";
+      padding: 0 2vmax 0 9vmax;
+      height: 60vh;
+      overflow: scroll;
+      justify-content: center;
+      background-color: $BgColorFrameHolder;
+      background-blend-mode: multiply;
+
+      .controllerSentEvents {
+        grid-area: Controller;
+        justify-content: center;
+        padding: 8px 0;
+        display: flex;
+        align-self: center;
+
+        a:first-child {
+          justify-content: flex-start;
+          i {
+            padding-right: 8px;
+          }
+        }
+        a:last-child {
+          justify-content: flex-end;
+        }
+        a {
+          display: flex;
+          width: 50%;
+          align-self: center;
+          color: $TypographyColorTeal-300;
+          font-size: $fontSizeSmall10;
+        }
+
+      }
+      .frameContent {
+        grid-area: Frame;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        background-color: $bodyColor;
+        border-radius: 4px 4px 0 0;
+
+        > div {
+          display: flex;
+          align-self: center;
+          justify-content: center;
+          overflow: hidden;
+          background-size:cover;
+          background-blend-mode: multiply;
+          background-image: linear-gradient(0deg, rgba(32, 45, 45, 0.3), rgba(32, 45, 45, 0.3));
+          border-radius: 4px 4px 0 0;
+
+        }
+
+      }
+
+    }
+
+    .statisticsHotspotsSection {
+      display: flex;
+      position: absolute;
+      z-index: 1;
+      top: -70px;
+      width: 24vmax;
+      z-index: 3;
+      flex-direction: column;
+      background-color: $TypographyWhite;
+
+      .headerSection {
+        display: flex;
+        align-self: center;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 25px 0 25px 9px;
+        color: $TypographyBlackColor;
+        font-weight: $TypographyFontWeightTeal-800;
+
+
+        .text ,
+        .iconTargetClick,
+        .iconArrowRight {
+          display: inline-flex;
+          cursor: pointer;
+        }
+
+        .text {
+          justify-content: center;
+          width: 80%;
+        }
+        .iconTargetClick {
+          justify-content: flex-start;
+        }
+        .iconArrowRight {
+          justify-content: flex-end;
+        }
+
+      }
+      .statisticsHotspotsList {
+        height: 45vmin;
+        max-height: 45vmin;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-start;
+        color: $TypographyColorTeal-800;
+        font-weight: $TypographyFontWeightTeal-700;
+        background-color: $TypographyWhite;
+        .viewMore {
+          display: flex;
+          align-self: center;
+          justify-content: center;
+          text-decoration: underline;
+          margin: 9px 0;
+          cursor: pointer;
+          background-color: transparent;
+          border-radius: 0;
+          border: none;
+
+        }
+        li:first-child {
+          border-top: $borderColorMain;
+        }
+        li {
+          position: relative;
+          display: grid;
+          grid-template-rows: auto;
+          grid-template-columns: 8% 8% 68% 8%;
+          column-gap: 2%;
+          padding: 14px 0 14px 40px;
+          
+          border-right: $borderColorMain;
+          border-left: $borderColorMain;
+          border-bottom: $borderColorMain;
+          small {
+            display: grid;
+          }
+          .iconHotspots {
+        
+            width: 12px;
+            height: 12px;
+           
+            border-radius: 50%;
+            margin-right: 6px;
+            margin-left: 8px;
+          }
+          small:last-child {
+            column-count: end;
+
+          }
+        }
+
+      }
+
+    }
+  }
+
+.containerBarChars {
+  display: grid;
+  margin: 0 3vmax;
+  border-radius: $borderRadiusMainAll;
+  border:$borderMainCtrls;
+  background-color: $TypographyWhite;
+
+  .barCharsHeader {
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20%;
+      border-bottom:$borderMainCtrls;
+      padding: 28px 30px;
+      position: relative;
+
+      p {
+        display: grid;
+        position: relative;
+        font-size: $medSmall4FontSize;
+        color: $TypographyBlackColor;
+        font-weight: $TypographyFontWeightTeal-800;
+
+
+        .tooltipContent {
+          background-color: $TypographyColorTeal-800;
+          &::before {
+            border-bottom: 5px solid $TypographyColorTeal-800;
+        }
+        }
+
+        small {
+          display: flex;
+          cursor: pointer;
+          font-size:$fontSizeSmall11;
+          color: $TypographyColorTeal-500;
+          font-weight: $TypographyFontWeightTeal-500;
+        }
+      }
+    }
+  .charBar {
+    overflow: hidden;
+      position: relative;
+      height: 200px;
+  
+  }
+}
+
+}
+
+@include mediaMinQuery($xlBreakPoint) { // > 1280
+  .statisticsWrapper {
+    .statisticsSectionsInfo {
+      width: 1280px;
+      margin: 0 auto 29px auto;
+      padding: 0;
+    }
+    .containerBarChars {
+    
+      width: 1280px;
+      margin: 0 auto;
+      padding: 0;
+      
+     }
+  }
+}
+

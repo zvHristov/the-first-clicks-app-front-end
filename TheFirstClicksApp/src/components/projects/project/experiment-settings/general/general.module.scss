@@ -1,0 +1,123 @@
+@import "theme";
+
+.generalWrraper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    margin-top: 20px;
+    padding: 0 3vmax;
+
+    .generalInner {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+
+        h1 {
+            margin-bottom: 22px;
+            font-size: $bigFontSize;
+            font-weight: $TypographyFontWeightTeal-800;
+
+        }
+
+        .generalFormProject {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            gap: 4px;
+            padding: 30px 24px;
+            margin-bottom: 24px;
+        
+
+            > div {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+               margin-bottom: 10px;
+    
+                P {
+                    display: grid;
+                    grid-template-columns: auto;
+                    grid-template-rows: auto;
+                    gap: 8px;
+    
+                    label, input, small {
+                        display: grid;
+                        grid-template-columns: auto;
+                        grid-template-rows: auto;
+    
+                    }
+    
+                    label {
+                        color: $TypographyColorTeal-900;
+                    }
+                    small {
+                        font-size: $fontSizeSmall10;
+                        color: $TypographyColorTeal-400;
+                    }
+                }
+            }
+    
+            .saveHolder {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+    
+                    button {
+                        display: flex;
+                        flex-direction: row;
+                        justify-self: flex-end;
+                        align-self: center;
+                        
+                        i {
+                            display: flex;
+                            flex-direction: colum;
+                            justify-self: flex-end;
+                            align-self: center;
+                            align-items: center;
+                            padding-left: 4px;
+                        }
+                    }
+            }
+        }
+        
+        
+        .snippetArea {
+            display: grid;
+        } 
+
+       h2 {
+        font-size: $medSmall4FontSize;
+        font-weight: $TypographyFontWeightTeal-800;
+       }
+        p {
+           font-size: $medSmall3FontSize;
+           font-weight: $TypographyFontWeightTeal-400;
+       }   
+    }
+    
+}
+
+
+@include mediaMinQuery($md) { // > 768
+    .generalWrraper {
+        grid-template-columns: 50% 30%;
+        column-gap: 100px;
+        margin-top: 0;
+        padding: 0;
+    }
+
+}
+@include mediaMinQuery($lg) { // > 992 
+    .generalWrraper {
+    
+        .generalInner {
+            .saveHolder {
+                button {
+                    width: 25%;
+                }
+            }
+        }
+     
+    }
+
+}

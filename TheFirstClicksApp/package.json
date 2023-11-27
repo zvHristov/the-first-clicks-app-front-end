@@ -1,0 +1,77 @@
+{
+  "name": "the-first-clicks",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@nivo/bar": "^0.46.0",
+    "@nivo/core": "^0.46.0",
+    "@testing-library/jest-dom": "^5.11.8",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/user-event": "^12.6.0",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^16.14.2",
+    "@types/react-dom": "^16.9.10",
+    "@types/react-router-dom": "^5.1.7",
+    "@yaireo/tagify": "^4.17.9",
+    "css-loader": "^6.8.1",
+    "i18next": "^19.8.4",
+    "i18next-xhr-backend": "^3.2.2",
+    "jwt-decode": "^3.1.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-i18next": "^11.8.5",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-script": "^2.0.5",
+    "react-scripts": "4.0.3",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "typescript": "^4.2.0-beta",
+    "web-vitals": "^0.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.21",
+    "@types/react-redux": "^7.1.15",
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
+    "eslint": "^7.18.0",
+    "node-sass": "^9.0.0",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-immutable-state-invariant": "^2.1.0",
+    "sass": "^1.68.0",
+    "sass-loader": "^7.0.1",
+    "tslint": "^6.1.3",
+    "tslint-react": "^5.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "develop": "set REACT_APP_WITH_IMMUTABLE_STATE_INVARIANT=true && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "i18n-export": "node ./scripts/i18n/i18n-export.js",
+    "i18n-import": "node ./scripts/i18n/i18n-import.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      "last 3 chrome version",
+      "last 3 and_chr version",
+      "last 2 firefox version",
+      "last 2 safari version",
+      "last 2 iOS version",
+      "last 1 Samsung version",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

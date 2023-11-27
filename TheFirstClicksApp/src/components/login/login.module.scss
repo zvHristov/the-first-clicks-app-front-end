@@ -1,0 +1,151 @@
+@import 'theme';
+
+.loginWrapper {
+    display: grid;
+    grid-area: 20px;
+    row-gap: 10px;
+    place-items: stretch;
+    gap: 40px;
+    
+    .loginInner {
+        align-self: first baseline;
+        justify-content: flex-start;
+
+        .logoHolder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 84px 0 74px 0;
+        }
+
+        .loginFormHolder {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 20px;
+
+            h1 {
+                display: grid;
+                text-align: center;
+                font-size: $bigFontSize;
+                font-weight: $TypographyFontWeightTeal-800;
+                color: $TypographyColorTeal-900;
+            }
+             > h4 {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: stretch;
+                
+                color: $TypographyColorTeal-500;
+                font-size: $fontSizeSmall11;
+                font-weight: $TypographyFontWeightTeal-500;
+                a {
+                    display: flex;
+                    color: $TypographyColorTeal-900;
+                    text-decoration: underline;
+                    padding-left: 4px;
+                }
+               
+            }
+
+            .googleLogin {
+                display: grid;
+                place-items: center;
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                button {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+            }
+
+            .formLogin {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                place-items: start;
+                gap: 20px;
+                padding: 18px 52px;
+                > div {
+                    display: grid;
+                    grid-template-columns: auto;
+                    width: 100%;
+
+                    p {
+                        display: grid;
+                        grid-template-columns: auto;
+                        grid-template-rows: auto;
+                        input {
+                            display: flex;
+                            flex-direction: row;
+                        }
+                    }
+                }
+                .credentialsHolder {
+                    display: flex;
+                    justify-content: stretch;
+                    flex-direction: row;
+                    align-items: stretch;
+                    p {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        flex-flow: row-reverse;
+                     
+
+                        label, input {
+                            display: flex;
+                            flex-direction: row;
+                            align-self: center;
+                            align-content: center;
+                            cursor: pointer;
+                        }
+                        label {
+                            padding-left: 4px;
+                            padding-top: 8px;
+                        }
+                        
+                        
+                    }
+                }
+            }
+        }
+
+        footer {
+            display: grid;
+            place-items: center;
+            gap: 10px;
+            margin-top: 150px;
+            margin-bottom: 18px;
+
+            h5 {
+                display: flex;
+                align-content: center;
+                color: $TypographyColorTeal-500;
+                font-size: $fontSizeSmall11;
+                font-weight: $TypographyFontWeightTeal-500;
+                a {
+                    color: $TypographyColorTeal-500;
+                    font-size: $fontSizeSmall11;
+                    text-decoration: underline;
+                }
+                
+            }
+        }
+    
+    }
+}
+
+@include mediaMinQuery($md) { // > 768
+    .loginWrapper {
+      place-items: center;
+      .loginInner {
+      
+        justify-content: flex-center;
+      }
+  
+    }
+  }

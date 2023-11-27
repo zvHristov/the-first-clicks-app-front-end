@@ -1,0 +1,353 @@
+@import 'theme';
+.projectsWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0 3vmax;
+    margin-top: 32px;
+
+    .projectsFilterHolder {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        
+        .expandAll {
+            cursor: pointer;
+        }
+        select {
+          :first-of-type {
+            width: 70%;
+            margin-left: 10px;
+          }
+        }
+
+        span {
+            align-self: center;
+            flex-direction: row;
+            font-size: $fontSizeSmall10;
+            color: $TypographyColorTeal-300;
+            font-weight: $TypographyFontWeightTeal-500; 
+            
+        }
+        .projectsHead {
+            display: grid;
+            font-size: $bigFontSize;
+            font-weight: $TypographyFontWeightTeal-800;
+        }
+
+        .projectsSearchFilter {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+
+            .filtersHolder {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 10px;
+            }
+
+        }
+    }
+
+    .projectsHolderAccordion {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 10px;
+        margin-top: 40px;
+
+        .Accordion {
+            display: grid; 
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            row-gap: 2px;
+
+            .AccordionHeading {
+                display: grid; 
+                grid-template-columns: auto auto;
+                grid-template-rows: auto;
+                font-size: $medSmallFontSize;
+                color:$TypographyColorTeal-900;
+                font-weight: $TypographyFontWeightTeal-500;
+
+                .AccordionHeaderName,
+                .AccordionHeaderCenter,
+                .AccordionHeaderSnippet,
+                .AccordionHeaderNavigation  {
+                    display: grid; 
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                 
+                }
+                .AccordionHeaderName {
+                    place-content: center;
+                    color: $TypographyColorTeal-700;
+                    font-weight: $TypographyFontWeightTeal-700; 
+                }
+                .AccordionHeaderCenter {
+                    place-items: center;
+                    place-content: center;
+                  
+                }
+                .AccordionHeaderSnippet {
+                    grid-template-columns: auto auto;
+                    place-content: stretch;
+                    position: relative;
+                    place-items: baseline;
+                   
+
+                    button  {
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        cursor: pointer;
+                        i {
+                            color: $TypographyColorTeal-900;
+                        }
+                    }
+                    > div {
+                        display: grid;
+                        place-content: center;
+
+                        .iconSetting {
+                            cursor: pointer;
+                            color: $TypographyColorTeal-200;
+                        }
+                    }
+                    
+                }
+                .AccordionHeaderNavigation {
+                    place-items: center;
+                    place-content: center;
+                    cursor: pointer;
+                }
+            }
+  
+
+            .AccordionContainer {
+                display: none; 
+                grid-template-columns: auto auto;
+                grid-template-rows: auto;
+               
+
+                background-color: $TypographyWhite;
+                border:$borderColorMain;
+                border-radius: $borderRadiusSmallAll;
+                .AccordionProjectThumbnail {
+                    display: grid;
+                    img {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                .AccordionProjectInfo {
+                    display: grid;
+                    gap: 5px;
+                    padding: 8px 0;
+                    h2, h4 {
+                        display: grid;
+                        gap: 10px;
+                        color: $blackColor;
+                        font-size: $medSmallFontSize;
+                        font-weight: $TypographyFontWeightTeal-800;
+                    }
+                    h4 {
+                      
+                        font-weight: $TypographyFontWeightTeal-500;
+                        color: $TypographyColorTeal-700;
+                    }
+                    
+                }
+                .AccordionProjectStatus {
+                    display: grid; 
+                    padding: 8px 0;
+                    grid-template-columns: auto auto auto;
+                    grid-template-rows: auto;
+                    place-content: center;
+                    grid-area: 10px;
+                    column-gap: 5px;
+                    gap: 10px;
+
+                    .AccordionInfoUpdated {
+                        display: grid; 
+                        h2, h4 {
+                            display: grid; 
+                            grid-template-columns: 1fr;
+                            font-size: $fontSizeSmall11;
+                            color: $TypographyColorTeal-500;
+                            font-weight: $TypographyFontWeightTeal-400;
+                        }
+                         h4 {
+                            color: $TypographyColorTeal-900;
+                            
+                        }
+                    }
+                    button {
+                        background-color: $TypographyWhite;
+                        border: $borderMainBtnsCtrls;
+                        color:$TypographyColorTeal-success-green;
+                        cursor: help;
+                    }
+              
+                    .AccordionInfoVisitors {
+                        display: grid; 
+                       
+                        h2, h4 {
+                            display: grid; 
+                            grid-template-columns: 1fr;
+                            font-size: $medSmallFontSize;
+                            color: $blackColor;
+                            font-weight: $TypographyFontWeightTeal-800;
+                        }
+                        h4 {
+                            color: $TypographyColorTeal-500;
+                            font-weight: $TypographyFontWeightTeal-400;
+                            
+                        }
+                    }
+                }
+                .settingProject {
+                        display: grid; 
+                        position: relative;
+                        padding: 8px 0;
+                        place-content: center;
+                
+
+                        i {
+                            display: grid;
+                            place-items: center;
+                            place-content: center;
+                            
+                            width: 28px;
+                            height: 28px;
+                            border-radius: 50%;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: $TypographyColorTeal-100;
+                            }
+                           
+                        }
+
+                        ul {
+                            display: flex;
+                            top: 36px;
+                            right: 0px;
+                            z-index: 2;
+                            width: 152px;
+                            justify-content: flex-start;
+                            flex-direction: column;
+                            position: absolute;
+                            background-color: $TypographyWhite;
+                            border: $borderMainBtnsCtrls;
+                            border-radius: $borderRadiusMainAll;
+                            box-shadow: $boxShadowPrimary;
+                            list-style: none;
+
+                        
+                            li {
+                               
+                                display: flex;
+                                flex-direction: column;
+                            
+                                font-size: $medSmallFontSize;
+                                color: $TypographyColorTeal-700;
+                                cursor: pointer;
+                                &:hover {
+                                    background-color: $selectOptionBgColor;
+                                  }
+                                &:last-child {
+                                    span {
+                                        color: $TypographyColorTeal-red-light;
+                                    }
+                                    
+                                }  
+                                a, span {
+                                        display: grid;
+                                        grid-template-columns: 95% 5%;
+                                        grid-template-rows: auto;
+                                        position: relative;
+                                        padding: 8px;
+                                        font-size: $medSmallFontSize;
+                                        color: $TypographyColorTeal-700;
+                                   
+                                    i {
+                                        display: grid;
+                                        position: absolute;
+                                        right: 0;
+                                        top:0;
+                                      
+                                    }
+                                }
+                            }
+                        }
+                }
+            }
+            .AccordionContainer.AccordionContainerActive {
+                display: grid;
+            }
+            
+        }
+
+    }
+  
+}
+
+
+@include mediaMinQuery($md) { // > 768
+.projectsWrapper {
+
+    .projectsFilterHolder {
+        grid-template-columns: 1fr auto;
+        
+    }
+    .projectsHolderAccordion {
+
+        .Accordion {
+            .AccordionHeading {
+                grid-template-columns: 2fr 2fr 50% 5%;
+                
+                .AccordionHeaderSnippet {
+                    grid-template-columns: 40% 10%;
+                    place-content: center;
+                    place-items: center;
+                }
+            }
+
+            .AccordionContainer {
+                grid-template-columns: 112px 2fr 50% 40px;
+                
+                .AccordionProjectStatus,
+                .settingProject { 
+                    place-content: unset;
+                }
+            }
+        }
+    }
+}
+}
+
+@include mediaMinQuery($xlBreakPoint) { // > 1280
+    .projectsWrapper {
+        width: 1280px;
+        margin: 32px auto 0 auto;
+        padding: 0;
+    }
+}
+
+@include mediaMinQuery($xll) { // > 1440
+    .projectsWrapper {
+       
+        .projectsHolderAccordion {
+    
+            .Accordion {
+    
+                .AccordionHeading {
+                    grid-template-columns: 2fr 2fr 25% 5%;
+                }
+                .AccordionContainer {
+                    grid-template-columns: 112px 2fr 20% 40px;
+                }
+            }
+        }
+    }
+    }

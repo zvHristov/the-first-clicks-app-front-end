@@ -1,0 +1,11 @@
+@import 'theme';
+
+:export {
+   
+    extraSmallResolution: $sxm;
+    smallResolution: $sm;
+    midResolution: $md;
+    largeResolution: $lg;
+    extralargeResolution: $xl;
+    mobileRes568: $xll;
+}

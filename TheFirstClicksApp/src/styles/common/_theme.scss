@@ -1,0 +1,102 @@
+//@import 'fonts';
+@import 'mixins';
+
+$fontFamifyInter: 'Inter', sans-serif;
+//// padding main
+$paddingMainAria: 0 9vmax;
+$BgColorMainCtrls: #fff;
+//
+$TypographyWhite: #ffffff;
+$TypographyBlackColor: #080808;
+$TypographyColorTeal-50: #F9FBFB;
+$TypographyColorTeal-100: #EDF2F2;
+$TypographyColorTeal-200: #B3C7C7;
+$TypographyColorTeal-300: #789b9b;
+$TypographyColorTeal-400: #5D8080;
+$TypographyColorTeal-500: #557777;
+$TypographyColorTeal-600: #3E5656;
+$TypographyColorTeal-700: #283939;
+$TypographyColorTeal-800: #202D2D;
+$TypographyColorTeal-900: #0D1C1C;
+$TypographyColorTeal-red-light: #D30637;
+$TypographyColorTeal-success-green: #0DC54A;
+$TypographyColorTeal-error-red: #C50D2E;
+$TypographyColorTeal-pink: #e35e91;
+$TypographyColorTeal-red: #94251f;
+$TypographyColorTeal-light-blue: #DDFFFF;
+$TypographyColorTeal-rich-orange: #F03F07;
+
+$bodyColor: #fff;
+$sectionBgColor: #E5E5E5;
+$selectOptionBgColor: #EDF2F2;
+$headerHeight: 53px;
+$BackgroundColorMain: #F9FBFB;
+
+//
+//fonts -size
+
+$fontSizeSmall10: .625rem; // 10px
+$fontSizeSmall11: .6875rem;  //11px
+$medSmallFontSize: .75rem; //12px
+$medSmall2FontSize: .8125rem; //13px
+$medSmall3FontSize: .875rem; //14px
+$medSmall4FontSize: .9375rem; //15px
+$regularFontSize: 1rem; //16px
+$bigMedFontSize: 1.313rem;//21px;
+$bigFontSize: 1.563rem;///25px
+
+
+///
+$LineHeightMain: 1.125rem;///18px
+
+//end
+//
+////
+
+$heightHeader: 52px;
+
+////
+//colors
+//font weight
+$TypographyFontWeightTeal-50: 50;
+$TypographyFontWeightTeal-100: 100;
+$TypographyFontWeightTeal-200: 200;
+$TypographyFontWeightTeal-300: 300;
+$TypographyFontWeightTeal-400: 400;
+$TypographyFontWeightTeal-500: 500;
+$TypographyFontWeightTeal-600: 600;
+$TypographyFontWeightTeal-700: 700;
+$TypographyFontWeightTeal-800: 800;
+$TypographyFontWeightTeal-900: 900;
+//end
+//font weight
+
+
+//colors
+$blackColor: #080808;
+////borders
+
+//borders
+$borderColor: #EDF2F2;
+$borderColorMain: 1px solid $borderColor;
+//
+
+///main border
+$borderMainCtrls: 1px solid #EDF2F2;
+$borderMainBtnsCtrls: 1px solid #AEEFC3;
+$borderSwitchBtnsCtrls: 1px solid #B3C7C7;
+$borderDarckBlackBtnsCtrls: 1px solid #0D1C1C;
+$paddingMainCtrls: 8px 11px 8px 11px;
+$borderRadiusSmallAll: 2px;
+$borderRadiusMainAll: 4px;
+$borderRadiusPrimaryAll: 8px;
+$borderRadiusBigAll: 14px;
+
+//
+//FRAME
+$BgColorFrameHolder: #202D2D;
+$borderColorPrimery: #EDF2F2;
+
+/* dropdown-box-shadow */
+$boxShadowPrimary: 0px 2px 4px $TypographyColorTeal-100;
+// box-shadow: 0px 2px 4px #EDF2F2;
