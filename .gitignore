@@ -15,3 +15,13 @@
 # end
 
 
+# misc
+/TheFirstClicksApp/.DS_Store
+/TheFirstClicksApp/.env.local
+/TheFirstClicksApp/.env.development.local
+/TheFirstClicksApp//TheFirstClicksApp/.env.test.local
+.env.production.local
+
+/TheFirstClicksApp/npm-debug.log*
+/TheFirstClicksApp/yarn-debug.log*
+/TheFirstClicksApp/yarn-error.log*
